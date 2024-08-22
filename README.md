@@ -1,6 +1,13 @@
 #NetflixGPT App clone
   - Create react app
   - install and configure tailwind css
+   -Header,Login signin signup form useRef hook
+  -Firebase setup configuration login,init,deploy
+  - deploy app in firebase
+  - createsignin signup user api
+  - redux store
+  - Implemented sigin signup signout
+  - fetch from TMDB Api
 
 
 
