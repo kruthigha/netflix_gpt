@@ -12,6 +12,7 @@ const Login = () => {
   const [err,setErr] = useState(null)
   const email = useRef();
   const pwd = useRef();
+  const displayName = useRef();
   const toffleForm =()=>{
     setIsSingInForm((t)=>!t);
   }
@@ -28,22 +29,20 @@ const Login = () => {
     .then(
        (res)=>{
      const user = res.user;
-     navigate('/browse');
      console.log(user)
      }
     ).catch((err)=>{
      // const errorCode = err.code;
       const errorMessage = err.message;
-      navigate('/');
+  
       setErr(errorMessage)
     }
     )
      } else{
       signInWithEmailAndPassword(auth,email.current.value,pwd.current.value)
       .then((userCredential) => {
-      const user = userCredential.user;
+      const user = userCredential.displayName;
       console.log("Succesfully SignedIn!",user)
-      navigate('/browse');
   })
   .catch((error) => {
     // const errorCode = error.code;
@@ -62,7 +61,7 @@ const Login = () => {
       <img src='https://assets.nflxext.com/ffe/siteui/vlv3/20bf1f4d-1c73-48fd-8689-310d6dd80efc/81bdc063-cb8f-4afe-8a02-a3131ca4ef5e/IN-en-20240812-POP_SIGNUP_TWO_WEEKS-perspective_WEB_7998f3b6-63e3-424a-8328-550cf777ddce_medium.jpg' alt='background-image' />
       <form onSubmit={(e)=>e.preventDefault()} className='absolute bg-black p-12 w-3/12 mx-auto right-0 left-0 top-32 bg-opacity-75 '>
         <h1 className='py-2 m-2 font-bold text-white'>{isSigInForm?"SignIn":"SignUp"}</h1>
-        {!isSigInForm && <input type="text" placeholder='Full Name' className='border border-black p-2 m-2 bg-gray-700' />}
+        {!isSigInForm && <input type="text" ref={displayName} placeholder='Full Name' className='border border-black p-2 m-2 bg-gray-700' />}
         <input ref ={email} type="text"  placeholder='Email Address' className='border border-black p-2 m-2 bg-gray-700' />
         <input ref={pwd} type='text' placeholder='Password' className='border border-black  p-2 m-2 bg-gray-700' />
         {err &&<p className='text-red-700 font-medium px-2'> {err}</p>}

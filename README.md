@@ -7,7 +7,17 @@
   - createsignin signup user api
   - redux store
   - Implemented sigin signup signout
-  - fetch from TMDB Api
+  - Bug Fix SignupUser,  if not logged in redirect user to login pg, else redirect him to browse page
+  -BugFix unSubcribe to a component when unmounted
+  - fetch from TMDB Api signup get auth key and auth tkn then do the apicall for url get the details of movies now playing
+  - create a movie slice and store the api response there
+  - custom Hooks
+  - Main ,Sec container
+  - fetch data for trailer vdeo
+  - create movie slice
+  - embed youtube vdeo autoplay
+  - TailWind
+  - secondary container
 
 
 
