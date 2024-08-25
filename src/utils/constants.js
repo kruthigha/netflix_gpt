@@ -3,6 +3,10 @@ export const LOGO =
 export const PHOTO_AVATAR =
   'https://tse3.mm.bing.net/th?id=OIP.XQ-com-ULw7aaf_U3BcQ3AAAAA&pid=Api&P=0&h=220';
 export const API_URL = 'https://api.themoviedb.org/3/movie/now_playing?&page=1'; 
+export const API_TopRated_URL ="https://api.themoviedb.org/3/movie/top_rated";
+export const API_Popular_URL ="https://api.themoviedb.org/3/movie/popular";
+export const API_Upcoming_URL ="https://api.themoviedb.org/3/movie/upcoming"
+
 export const API_OPTIONS = {
   method: 'GET',
   headers: {
@@ -10,3 +14,4 @@ export const API_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZTgyOTYwMWZlNjAzZjBmNjIyMjQzNzNlMGU5ZDMyOCIsIm5iZiI6MTcyNDQ5MDcwNC44MDMyNDQsInN1YiI6IjY2Yzk5YWYyZTMwOTE3YWExMGIzMWM1MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mw4F-n2d6voyG0kHvMBCqIJz-GdppGwXVxy7Qk9Xwzw',
   },
 };
+export const IMG_CDN= "https://image.tmdb.org/t/p/w500/"

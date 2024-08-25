@@ -18,7 +18,7 @@
   - embed youtube vdeo autoplay
   - TailWind
   - secondary container
-
+  - movie list custom hooks browse page with tailwind css
 
 
 #Build Plan
