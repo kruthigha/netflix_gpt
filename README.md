@@ -19,6 +19,7 @@
   - TailWind
   - secondary container
   - movie list custom hooks browse page with tailwind css
+  - GPT Search
 
 
 #Build Plan
